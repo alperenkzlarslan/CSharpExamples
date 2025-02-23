@@ -1,0 +1,4 @@
+# Visual Studio dosyalarını yoksay
+.vs/
+bin/
+obj/
