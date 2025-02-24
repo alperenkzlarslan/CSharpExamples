@@ -198,18 +198,109 @@ string lastname = "Aktaş";
 string allName = string.Concat(name, lastname);
 Console.WriteLine(allName);
 
-int x = 10;
+int x = 10; //İnt ler birbirlerine eklenir 
 int y = 20;
 int z = x + y;
 Console.WriteLine(z);
 
-string x1 = "10";
+string x1 = "10"; //stringler birbirleri ile birleştirilir 
 string y1 = "20";
 string z1 = x1 + y1;
 Console.WriteLine(z1);
+
+string myString = "Merhaba";
+Console.WriteLine("Kelimenin ilk harfi: " + myString[0]);
+Console.WriteLine("a harfinin indeksi: " + myString.IndexOf("a"));
+string ad = "Alperen Kızılarslan";
+int charPos = ad.IndexOf("K");
+string soyad = ad.Substring(charPos);
+Console.WriteLine(soyad);
+
+//Escape Character - Backslash \
+string txt = "Alperen 'in \"maviş\" adında bir kedisi vardı.";
+Console.WriteLine(txt);
+
+string parca = "Bu parçanın 1. satırı \nBu parçanın 2. satırı"; // \n yeni satıra geçer 
+Console.WriteLine(parca);
+string paragraf = "Paragrafın 1. satırı \n\tParagrafın 2. satırı"; // \t bir tab boşluk bırakır 
+Console.WriteLine(paragraf);
+string myNewString = "Merhaba C\b#"; // \b backspace yapar 
+Console.WriteLine(myNewString);
 #endregion
 
 
+#region Boolean Örnekleri
+bool evet = true;
+bool hayır = false;
+Console.WriteLine(evet);
+Console.WriteLine(hayır);
+
+int sayi1 = 10;
+int sayi2 = 5;
+Console.WriteLine(sayi1 > sayi2);
+
+Console.WriteLine(sayi1 == 10);
+Console.WriteLine(sayi2 == 15);
+
+int myAge = 22;
+int myVotingAge = 18;
+Console.WriteLine(myAge >= myVotingAge);
+
+if (myAge >= myVotingAge)
+{
+    Console.WriteLine("Yaşı yeterli oy kullanabilir.");
+}
+else
+{
+    Console.WriteLine("Yaşı 18'den küçük oy kullanamaz.");
+}
+
+
+#endregion
+
+
+#region if else örnekleri
+
+if (44 > 23)
+{
+    Console.WriteLine("44 sayısı 23 sayısından büyüktür");
+}
+
+int a = 15;
+int b = 20; 
+if (b > a)
+{
+    Console.WriteLine("B sayısı A dan daha büyüktür");
+}
+
+int saat = 16;
+if (saat <= 12)
+{
+    Console.WriteLine("Günaydın");
+}
+else
+{
+    Console.WriteLine("Tünaydın");
+}
+
+int puan = 65; 
+if (puan > 70)
+{
+    Console.WriteLine("Dersten başarıyla geçtiniz");
+}
+else if (puan >= 50)
+{
+    Console.WriteLine("Dersten sorumlu geçtiniz");
+}
+else
+{
+    Console.WriteLine("Dersten kaldınız");
+}
+
+int zaman = 20;
+string result = (zaman < 18) ? "İyi Günler" : "İyi Akşamlar";
+Console.WriteLine(result);
+    #endregion
 
 
 
@@ -219,5 +310,7 @@ Console.WriteLine(z1);
 
 
 
-Console.ReadKey();
+
+
+    Console.ReadKey();
 
