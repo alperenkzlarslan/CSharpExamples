@@ -300,7 +300,175 @@ else
 int zaman = 20;
 string result = (zaman < 18) ? "İyi Günler" : "İyi Akşamlar";
 Console.WriteLine(result);
-    #endregion
+#endregion
+
+
+#region Switch örnekleri 
+
+int gun = 8;
+switch (gun)
+{
+    case 1:
+        Console.WriteLine("Pazartesi");
+        break;
+    case 2:
+        Console.WriteLine("Salı");
+        break;
+    case 3:
+        Console.WriteLine("Çarşamba");
+        break;
+    case 4:
+        Console.WriteLine("Perşembe");
+        break;
+    case 5:
+        Console.WriteLine("Cuma");
+        break;
+    case 6:
+        Console.WriteLine("Cumartesi");
+        break;
+    case 7:
+        Console.WriteLine("Pazar");
+        break;
+    default:
+        Console.WriteLine("Yanlış sayı girildi");
+        break;
+}
+
+
+
+#endregion
+
+
+#region Loop örnekleri 
+
+//While loop - koşul doğru ise çalışır 
+int i = 0;
+while (i < 5)
+{
+    Console.WriteLine(i);
+    i++;
+}
+
+//Do while loop - Döngü 1 kere çalışır sonra kontrol sağlar 
+int j = 1;
+do
+{
+    Console.WriteLine(j);
+        j++;
+}
+while (j < 1);
+
+
+// For Loop 
+for (int l = 0; l < 6; l++)
+{
+    Console.WriteLine(l);
+}
+
+//Nested Loop 
+for (int s1 = 0; s1 <= 2; ++s1)
+{
+    Console.WriteLine("Dış Blok: " + s1);
+
+    for (int s2 = 0; s2 <= 3; s2++)
+    {
+        Console.WriteLine("İç Blok: " + s2);
+    }
+}
+
+//foreach loop - Listelerin her bir elemanını döngüye sokabilir 
+string[] cars = { "Volvo", "BMW", "Mercedes", "Ford", "Renault", "Fiat" };
+foreach (string a1 in cars)
+{
+    Console.WriteLine(a1);
+}
+
+#endregion
+
+
+#region Break-Contiune Örnekleri
+// Break and Contiune anahtar kelimelerini while loop için de kullanabiliriz 
+for (int i1 = 0; i1 < 5; i1++)
+{
+    if (i1 == 4)
+    {
+        break;
+    }
+    Console.WriteLine(i1);      
+}
+
+for (int i2 = 0; i2 < 7; i2++)
+{
+    if (i2 == 5)
+    {
+        continue;
+    }
+    Console.WriteLine(i2);
+}
+#endregion
+
+
+#region Array Örnekleri 
+
+string[] myPcTool = {"Mosue", "Klavye", "Kulaklık", "Monitör", "Kasa", "Hoparlör", "MousePad"};
+Console.WriteLine(myPcTool[0]);
+
+//Liste içindeki elemanı değiştirme 
+myPcTool[0] = "Fare"; 
+Console.WriteLine(myPcTool[0]);
+
+//Listenin eleman sayısını alma 
+Console.WriteLine(myPcTool.Length);
+
+//Farklı dizi tanımlamaları
+string[] cars1 = new string[4];
+string[] cars2 = new string[4] { "Volvo", "BMW", "Ford", "Mazda" };
+string[] cars3 = new string[] { "Volvo", "BMW", "Ford", "Mazda" };
+
+for (int i5 = 0; i5 < myPcTool.Length; i5++)
+{
+    Console.WriteLine(i5);
+}
+
+foreach (string i6 in myPcTool)
+{
+    Console.WriteLine(i6);
+}
+
+//Arrayi alfabetik sıralama -  Array.Sort(array_name) - Sayıları da aynı şekilde sıralar 
+Array.Sort(myPcTool);
+foreach (string tool in myPcTool)
+{
+    Console.WriteLine(tool);
+}
+
+int[] myNumList12 = { 11, 45, 9, 0, 23, 8, 54 };
+Console.WriteLine(myNumList12.Max()); // En büyük sayıyı alır 
+Console.WriteLine(myNumList12.Min()); // En küçük sayıyı alır
+Console.WriteLine(myNumList12.Sum()); // Sayıları toplar 
+
+//Multidimensional Array - Çok boyutlu diziler 
+int[,] numberss = { { 0, 1, 2 }, { 3, 4, 5 } };
+Console.WriteLine(numberss[0, 1]);
+
+//2D dizinin elemanını değiştirme 
+numberss[0, 0] = 6;
+Console.WriteLine(numberss[0, 0]);
+
+//2D Diziyi döngüye alma 
+foreach (int i7 in numberss)
+{
+    Console.WriteLine(i7);
+}
+
+for (int i8 = 0; i8 < numberss.GetLength(0); i8++)
+{
+    for (int i9 = 0; i9 < numberss.GetLength(1); i9++)
+    {
+        Console.WriteLine(numberss[i8, i9]);
+    }
+}
+#endregion
 
 
 
@@ -308,9 +476,5 @@ Console.WriteLine(result);
 
 
 
-
-
-
-
-    Console.ReadKey();
+Console.ReadKey();
 
