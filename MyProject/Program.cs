@@ -33,6 +33,13 @@ Console.WriteLine("Çıkış yılı: " + Honda.year);
 Console.WriteLine("Vites tipi: " + Honda.gearType);
 Motorcycle.runEngine();
 
+Car Ford = new Car("white", "otomatik vites", 220, 2024, 259, "Mustang", "Ford");
+
+Console.WriteLine("Renk: " + Ford.color); Console.WriteLine("Model: " + Honda.model);
+Console.WriteLine("Beygir: " + Ford.horsePower);
+Console.WriteLine("Son hız: " + Ford.topSpeed);
+Console.WriteLine("Çıkış yılı: " + Ford.year);
+Console.WriteLine("Vites tipi: " + Ford.gearType);
 
 Console.ReadKey();
 
