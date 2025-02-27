@@ -7,7 +7,7 @@ using C_Examples.Examples;
 
 namespace C_Examples.Examples
 {
-    public class Car
+    public class Car 
     {
         public string color;
         public string model;
@@ -16,6 +16,11 @@ namespace C_Examples.Examples
         public int topSpeed;
         public int horsePower;
         public int year;
+
+        public void horn()
+        {
+            Console.WriteLine("düt dürü düt düüüüüt!!!");
+        }
 
         public Car(string carColor, string carGearType, int carHorsePower, int carYear, int carTopSpeed, string carModel, string carBrand) 
         {

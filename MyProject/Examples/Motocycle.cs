@@ -6,8 +6,9 @@ using System.Threading.Tasks;
 
 namespace C_Examples.Examples
 {
-    public class Motorcycle
+    public class Motocycle //sealed class Car - şeklinde yazılsaydı bu sınıf kalıtım olarak alınamazdı 
     {
+        
         public string color;
         public string model;
         public string brand;
@@ -16,7 +17,12 @@ namespace C_Examples.Examples
         public int horsePower;
         public int year;
 
+        private string headLight = "Led";
 
+        public void horn()
+        {
+            Console.WriteLine("bippp biiiiiiiiipp !!!");
+        }
         public static void runEngine()
         {
             Console.WriteLine("Motor çalıştırıldı");
