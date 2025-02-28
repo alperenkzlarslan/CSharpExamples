@@ -11,11 +11,11 @@ namespace C_Examples.Examples
         void bicycleRide(); 
     }
 
-    //class RaceBicycle : IBicycle
-    //{
-    //    public void bicycleRide()
-    //    {
-    //        Console.WriteLine("Yarış bisikleti sürülmeye hazır");
-    //    }
-    //}
+    class RaceBicycle : IBicycle
+    {
+        public void bicycleRide()
+        {
+            Console.WriteLine("Yarış bisikleti sürülmeye hazır");
+        }
+    }
 }

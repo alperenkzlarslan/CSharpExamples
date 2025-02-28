@@ -1,5 +1,7 @@
 ﻿
+using System.Net.Security;
 using C_Examples.Examples;
+using static C_Examples.Examples.EnumExample;
 
 //textExample.Run();
 
@@ -94,7 +96,32 @@ reyna.gameMusic();
 
 RaceBicycle myRaceBicycle = new RaceBicycle();
 myRaceBicycle.bicycleRide();
- 
+
+#endregion
+
+#region Enum Example 
+
+Level lowLevel = Level.Low;
+Console.WriteLine("En düşük seviye: " + lowLevel);
+
+switch (lowLevel)
+{
+    case Level.Low:
+        Console.WriteLine("Düşük level");
+        break;
+
+    case Level.Medium:
+        Console.WriteLine("Orta seviye");
+        break;
+
+    case Level.High:
+        Console.WriteLine("Yüksek seviye");
+        break;     
+}
+
+int firstMonth = (int)Months.January;
+Console.WriteLine(firstMonth);
+
 #endregion
 
 
