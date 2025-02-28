@@ -1,5 +1,6 @@
 ﻿
 using System.Net.Security;
+using System.IO;
 using C_Examples.Examples;
 using static C_Examples.Examples.EnumExample;
 
@@ -99,6 +100,7 @@ myRaceBicycle.bicycleRide();
 
 #endregion
 
+
 #region Enum Example 
 
 Level lowLevel = Level.Low;
@@ -121,6 +123,17 @@ switch (lowLevel)
 
 int firstMonth = (int)Months.January;
 Console.WriteLine(firstMonth);
+
+#endregion
+
+
+#region
+
+string writeText = "Merhaba Dünya";
+File.WriteAllText("testFile.txt", writeText);
+
+string readText = File.ReadAllText("testFile.txt");
+Console.WriteLine(readText);
 
 #endregion
 
