@@ -127,7 +127,7 @@ Console.WriteLine(firstMonth);
 #endregion
 
 
-#region
+#region File Example 
 
 string writeText = "Merhaba Dünya";
 File.WriteAllText("testFile.txt", writeText);
@@ -137,6 +137,32 @@ Console.WriteLine(readText);
 
 #endregion
 
+
+#region Exception Example 
+
+try
+{
+    int[] numberList = { 1, 2, 3 };
+    Console.WriteLine(numberList[10]);
+}
+catch (Exception num) // Herhangi bir hata türünü yakalamak istediğinde Exception kullanılır 
+{
+    Console.WriteLine("Birşeyler ters gitti.");
+    Console.WriteLine("Hata detayı: " + num.Message);
+}
+finally // Her durumda çalışır, kaynakların temizlenmesi gibi işlemler burada yapılır.
+{
+    Console.WriteLine("Try catch bloğu tamamlandı.");
+}
+
+#endregion
+
+
+#region Throw Example 
+
+ThrowExample.checkAge(17);
+
+#endregion
 
 Console.ReadKey();
 
